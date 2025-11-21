@@ -1,0 +1,6 @@
+langchain
+langgraph
+openai
+tavily
+tavily-python
+langchain-community
