@@ -38,7 +38,3 @@ Due to rapid updates in LangChain & LangGraph, the project includes:
 
 <img width="1896" height="1026" alt="Screenshot 2025-11-21 152550" src="https://github.com/user-attachments/assets/3607207f-15be-4588-bd91-5a82c0ddaf2c" />
 
-
-- Code compatible with multiple message formats  
-
-## 📂 Project Structure
