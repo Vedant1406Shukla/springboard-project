@@ -41,7 +41,7 @@ Due to rapid updates in LangChain & LangGraph, the project includes:
 <img width="1896" height="1026" alt="Screenshot 2025-11-21 152550" src="https://github.com/user-attachments/assets/3607207f-15be-4588-bd91-5a82c0ddaf2c" />
 
 ## Week -2 Milestone
-<img width="1889" height="847" alt="Screenshot 2025-12-04 164812" src="https://github.com/user-attachments/assets/accbcb3f-d5f2-45f4-b486-5d7ad943d8cd" /> <br>
+
 <img width="1889" height="847" alt="Screenshot 2025-12-04 164812" src="https://github.com/user-attachments/assets/95561f64-8d5c-4ff0-868d-90efff2d8b07" /> <br>
 <img width="995" height="1029" alt="Screenshot 2025-12-04 164839" src="https://github.com/user-attachments/assets/07583c32-fbab-4b8b-87b9-bb25bd2b6e13" /> <br>
 <img width="1107" height="1079" alt="Screenshot 2025-12-04 164934" src="https://github.com/user-attachments/assets/46810c07-c684-4e15-b42d-b8e75399e0df" />
