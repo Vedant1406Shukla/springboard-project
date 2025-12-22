@@ -9,7 +9,7 @@ from graph import graph
 load_dotenv()
 # Page config
 st.header("Open Deep Research Assistant 🤖")
-st.set_page_config(page_title="Open Deep Research Assistant", page_icon="🤖", layout="wide")
+st.set_page_config(page_title="Research Assistant", page_icon="🤖", layout="wide")
 # --- Theme Toggle ---
 if "theme" not in st.session_state:
     st.session_state.theme = "light"
@@ -90,6 +90,15 @@ with st.sidebar:
             st.success("Tavily API: Connected")
         else:
             st.error("Tavily API: Missing")
+    st.divider()
+    # Search Focus
+    st.subheader("🔍 Search Focus")
+    search_focus = st.radio(
+        "Select focus",
+        ["General Web", "Academic Research Paper"],
+        index=1, # Default to Academic
+        label_visibility="collapsed"
+    )
     st.divider()
     # Chat List
     st.subheader("Chats")
@@ -259,7 +268,8 @@ if st.session_state.current_chat_id in st.session_state.chats:
             "configurable": {
                 "thread_id": st.session_state.current_chat_id,
                 "openai_api_key": openai_api_key,
-                "tavily_api_key": tavily_api_key
+                "tavily_api_key": tavily_api_key,
+                "search_focus": search_focus
             }
         }
         inputs = {
