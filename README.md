@@ -76,7 +76,9 @@ Milestone 3: Weeks 5–6 – UI and Memory Integration
 ● Thread tracking and continuity support<br>
 </ul>
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/d76f4ee5-9bd4-49f1-a132-41a4116f4d1f" />
-
+<br>
+## Deployment URL
+https://opendeepresearch.streamlit.app/
 
 
 
