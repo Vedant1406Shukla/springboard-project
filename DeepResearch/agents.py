@@ -3,14 +3,23 @@ import random
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-from langchain_community.tools.tavily_search import TavilySearchResults
+from langchain_tavily import TavilySearch
+
 from langchain_core.messages import HumanMessage, SystemMessage
 
 # Remove global LLM init
 # llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0)
 
 # Tools
-tavily_tool = TavilySearchResults(max_results=5)
+def get_tavily_tool():
+    api_key = os.getenv("TAVILY_API_KEY")
+    if not api_key:
+        raise RuntimeError("TAVILY_API_KEY is not set")
+    limit = random.randint(5, 10)
+    return TavilySearch(
+        max_results=limit,
+        tavily_api_key=api_key
+    )
 
 # Helper to get LLM
 def get_llm(config):
@@ -78,12 +87,7 @@ def searcher_node(state, config):
     
     # Execute search
     try:
-        tavily_api_key = config.get('configurable', {}).get('tavily_api_key')
-        if not tavily_api_key:
-             tavily_api_key = os.environ.get("TAVILY_API_KEY")
-        
-        limit = random.randint(5, 10)
-        tool = TavilySearchResults(max_results=limit, tavily_api_key=tavily_api_key)
+        tool = get_tavily_tool()
         results = tool.invoke(search_query)
         # Check if results is a list (standard output) or string (error)
         if isinstance(results, list):
