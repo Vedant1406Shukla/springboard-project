@@ -1,88 +1,87 @@
-# 📘 Springboard Project – AI + LangGraph + Tavily Integration
+# OpenDeepResearcher: Agentic LLM Research Framework
 
-This repository contains experimentation with **LangGraph**, **LangChain**, and **Tavily Search API** to build retrieval-augmented pipelines, agent workflows, and LLM-powered applications.
+## 1. Project Title
+OpenDeepResearcher – An Agentic LLM-Based Deep Research Assistant
 
-It includes Python scripts demonstrating:
+## 2. Project Overview
+OpenDeepResearcher is an AI-powered research assistant designed to autonomously conduct deep,
+structured, and multi-perspective research on complex topics using Large Language Models (LLMs)
+and agentic workflows.
 
-- 🔎 **Tavily Search API** usage  
-- 🔗 **LangGraph message-passing workflows**  
-- 🧠 Integrating tools into custom LLM agent pipelines  
-- 🏗️ Basic agent graph construction and invocation  
-- 🐍 Experiments for tool-based LLM workflows  
+**Problem Solved**
+- Manual research is time-consuming and fragmented
+- Difficult to synthesize information from multiple sources
 
-## 🚀 Features
+**Objective**
+- Automate planning, retrieval, analysis, and report generation
 
-### ✔ Tavily API Integration
-The project demonstrates how to:
+## 3. Software and Hardware Dependencies
 
-- Initialize a Tavily search client  
-- Execute search queries  
-- Use Tavily results inside LangGraph workflows  
-
-### ✔ LangGraph Workflow
-Includes examples of:
-
-- Creating nodes for tools and LLMs  
-- Passing messages between nodes  
-- Handling mixed message types (dict + LC message objects)  
-- Building directed computation graphs  
-
-### ✔ Robust Error Handling
-Due to rapid updates in LangChain & LangGraph, the project includes:
-
-- Universal message extractor  
-- Fix for `HumanMessage object is not subscriptable`  
-- Fix for `tool_call_id` requirement in new LangChain versions
-
-- ## Week -1 Milestone 
-Milestone 1: Weeks 1–2 – Foundation Setup
+### Software
 <ul>
-  <li>Set up the development environment</li>
-  <li>Python environment and virtualenv</li>
-  <li>Install required dependencies</li>
-  <li>Design project structure and architecture</li>
-  <li>Define agent responsibilities and data flow</li>
-  <li>Integrate local LLM via LM Studio</li>
-  <li>Configure external services (e.g., Tavily)</li>
+<li> <b>Programming Language:</b> Python 3.10+.</li>
+<li>  <b>Core Frameworks:</b>
+  <ul>
+     <li><b>LangGraph: </b> For defining and executing multi-agent workflows.</li>
+    <li><b>LangChain:</b> For LLM integration, memory handling, and tool coordination.</li>
+  </ul>
+</li>
+<li> <b>APIs & Integration:</b>
+      <ul>
+        <li><b>Tavily API:</b> For real-time web search and information retrieval.</li>
+        <li><b>LM Studio / Ollama:</b> To run local language models (e.g., Qwen2.5-7B-Instruct) via an OpenAI-compatible interface.</li>    
+      </ul>
+</li>
+  <li><b>Environment Management:</b> pip / venv and Git.</li>
 </ul>
 
-<img width="1900" height="842" alt="Screenshot 2025-11-21 144323" src="https://github.com/user-attachments/assets/d1c32ec7-924a-40ba-ac2c-c2234ca4c138" /> <br><br>
+### Hardware
+- Minimum 8 GB RAM (16 GB recommended)
+- GPU optional for faster inference
 
-<img width="1896" height="1026" alt="Screenshot 2025-11-21 152550" src="https://github.com/user-attachments/assets/3607207f-15be-4588-bd91-5a82c0ddaf2c" />
-
-## Week -2 Milestone
-Milestone 2: Weeks 3–4 – Core Agent Development
-<ul>
-● Build functional agents <br>
-● Planner Agent: break down main topic<br>
-● Searcher Agent: fetch content using Tavily<br>
-● Writer Agent: synthesize responses using LLM<br>
-● Implement execution pipeline using LangGraph<br>
-● Validate basic research loop from input to summary
-</ul>  
-<img width="1578" height="947" alt="image" src="https://github.com/user-attachments/assets/6d9016ef-0117-40c9-981e-599a73de8b29" /> <br>
-<img width="1901" height="953" alt="image" src="https://github.com/user-attachments/assets/38061a5e-1dbd-4aec-9083-d4d6d2c0738f" />
+## 4. Architecture Diagram
+<img width="1156" height="428" alt="image" src="https://github.com/user-attachments/assets/71d39cde-abba-4683-8cb7-cf64c2a94f39" />
 
 
-
-## Week -3 Milestone
-Milestone 3: Weeks 5–6 – UI and Memory Integration
-<ul>
-● Build user interface <br>
-● Clean, ChatGPT-like design <br>
-● Input prompt and result display <br>
-● Connect UI to backend agent pipeline <br>
-● Implement session memory <br>
-● Thread tracking and continuity support<br>
-</ul>
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/d76f4ee5-9bd4-49f1-a132-41a4116f4d1f" />
+## 5. Workflow
+1. User enters research query
+2. Planner agent creates research plan
+3. Searcher agent retrieves web data
+4. Writer agent synthesizes content
+5. Final research report generated
 <br>
+<img width="1635" height="527" alt="image" src="https://github.com/user-attachments/assets/bb692b6b-0ae2-4350-8154-2938f288c89c" />
 
-# Deployment URL
+
+## 6. Agent Roles
+- Planner: Task decomposition and planning
+- Searcher: Web information retrieval
+- Writer: Summarization and report writing
+- Pipeline: Agent orchestration via LangGraph
+
+## 7. Sample Demo
+The user enters a research query through the interface, which is decomposed into sub-tasks by the Planner Agent. Relevant information is fetched from the web using the Searcher Agent, and the Writer Agent synthesizes the data into a structured research report displayed to the user.
+
+<img width="1919" height="1079" alt="Screenshot 2025-12-15 183009" src="https://github.com/user-attachments/assets/7715253f-e04a-41ee-93aa-66f033e0545f" />
+
+
+## 8. Outputs
+- Structured research reports
+- Summarized insights
+- Context-aware responses
+<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/6a7dac7f-5f45-4afb-aaa2-d156cd92d520" />
+
+
+## 9. Limitations
+- Dependent on LLM quality
+- Web data accuracy varies
+- Performance limited on low-resource systems
+
+## 10. Future Enhancements
+- PDF/Markdown export
+- Citation validation
+- Multi-language support
+- Cloud deployment
+
+## 11. Deployed Project Link
 https://opendeepresearch.streamlit.app/
-
-
-
-
-
-
