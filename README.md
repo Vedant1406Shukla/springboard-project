@@ -54,10 +54,10 @@ and agentic workflows.
 
 
 ## 6. Agent Roles
-- Planner: Task decomposition and planning
-- Searcher: Web information retrieval
-- Writer: Summarization and report writing
-- Pipeline: Agent orchestration via LangGraph
+- **Planner**: Task decomposition and planning
+- **Searcher**: Web information retrieval
+- **Writer**: Summarization and report writing
+- **Pipeline**: Agent orchestration via LangGraph
 
 ## 7. Sample Demo
 The user enters a research query through the interface, which is decomposed into sub-tasks by the Planner Agent. Relevant information is fetched from the web using the Searcher Agent, and the Writer Agent synthesizes the data into a structured research report displayed to the user.
